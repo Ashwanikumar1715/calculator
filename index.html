@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>calculator</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="center">
+        <form name="forms">
+            <input type="text" id="display" name="display" disabled>
+            <div class="buttons">
+                <input type="button" id="seven" value="7">
+                <input type="button" id="eight" value="8">
+                <input type="button" id="nine" value="9">
+                <input type="button" id="divide" value="/"><br>
+                <input type="button" id="four" value="4">
+                <input type="button" id="five" value="5">
+                <input type="button" id="six" value="6">
+                <input type="button" id="multiply" value="*"><br>
+                <input type="button" id="one" value="1">
+                <input type="button" id="two" value="2">
+                <input type="button" id="three" value="3">
+                <input type="button" id="subtract" value="-"><br>
+                <input type="button" id="dot" value=".">
+                <input type="button" id="zero" value="0">
+                <input type="button" id="sum" value="+">
+                <input type="button" id="clear" value="C"><br>
+                <input type="button" id="equalto" value="=">
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#one').click(function () {
+                document.forms.display.value += 1;
+            });
+            $('#two').click(function () {
+                document.forms.display.value += 2;
+            });
+            $('#three').click(function () {
+                document.forms.display.value += 3;
+            });
+            $('#four').click(function () {
+                document.forms.display.value += 4;
+            });
+            $('#five').click(function () {
+                document.forms.display.value += 5;
+            });
+            $('#six').click(function () {
+                document.forms.display.value += 6;
+            });
+            $('#seven').click(function () {
+                document.forms.display.value += 7;
+            });
+            $('#eight').click(function () {
+                document.forms.display.value += 8;
+            });
+            $('#nine').click(function () {
+                document.forms.display.value += 9;
+            });
+            $('#zero').click(function () {
+                document.forms.display.value += 0;
+            });
+            $('#dot').click(function () {
+                document.forms.display.value += '.';
+            });
+            $('#sum').click(function () {
+                document.forms.display.value += '+';
+            });
+            $('#subtract').click(function () {
+                document.forms.display.value += '-';
+            });
+            $('#multiply').click(function () {
+                document.forms.display.value += '*';
+            });
+            $('#divide').click(function () {
+                document.forms.display.value += '/';
+            });
+            $('#equalto').click(function () {
+                if(display.value==""){
+                    alert("Please type something")
+                }
+                else{
+                    document.forms.display.value = eval(document.forms.display.value);
+                }
+            });
+            $('#clear').click(function(){
+             document.forms.display.value = "";
+           });
+        })
+    </script>
+</body>
+
+</html>
