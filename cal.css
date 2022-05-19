@@ -20,6 +20,7 @@ body{
 input[type="button"]:hover{
     transition: .5s;
     background: violet;
+   transition: all 4s ease;
   }
 input[type="text"]{
     height: 60px;
